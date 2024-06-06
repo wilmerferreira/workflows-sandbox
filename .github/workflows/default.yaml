@@ -13,3 +13,4 @@ jobs:
         run: |
           echo "Repository: ${{ github.repository }}"
           echo "Workflow: ${{ github.GITHUB_WORKFLOW }}"
+          echo "Event: ${{ github.GITHUB_EVENT_NAME }}
