@@ -14,3 +14,7 @@ jobs:
           echo "Repository: ${{ github.repository }}"
           echo "Workflow: ${{ github.GITHUB_WORKFLOW }}"
           echo "Event: ${{ github.GITHUB_EVENT_NAME }}"
+          echo "Runner Name: ${{ github.RUNNER_NAME }}"
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Run ID: ${{ github.GITHUB_RUN_ID }}"
+          echo "Run Number: ${{ github.GITHUB_RUN_NUMBER }}"
