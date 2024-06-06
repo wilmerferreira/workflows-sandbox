@@ -11,13 +11,20 @@ jobs:
         uses: actions/checkout@main
       - name: Print Context Variables
         run: |
-          echo "Repository: ${{ github.repository }}"
-          echo "Event: ${{ github.event_name }}"
+          echo "Event"
+          echo "- Object: ${{ github.event }}"
+          echo "- Name: ${{ github.event_name }}"
 
+          echo
+          echo "Repository"
+          echo "- Name: ${{ github.repository }}"
+          echo "- Url: ${{ github.repositoryUrl }}"
+          
           echo
           echo "Workflow"
           echo "- Name: ${{ github.workflow }}"
           echo "- Path: ${{ github.workflow_ref }}"
+          echo "- Retention: ${{ github.retention_days }}"
           
           echo
           echo "Runner"
