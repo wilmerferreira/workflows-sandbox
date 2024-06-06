@@ -12,7 +12,7 @@ jobs:
       - name: Print Context Variables
         run: |
           echo "Event"
-          echo "- Object: ${{ github.event }}"
+          echo "- Object: ${{ fromJSON(github.event) }}"
           echo "- Name: ${{ github.event_name }}"
 
           echo
