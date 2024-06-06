@@ -1,0 +1,14 @@
+name: Default Workflow
+
+on: [pull_request, push]
+
+jobs:
+  default-job:
+    name: Default Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Print Context Variables
+        run: |
+          echo "Hello from workflow!"
