@@ -1,6 +1,6 @@
 name: Default Workflow
 
-on: [pull_request, push]
+on: [pull_request, push, workflow_dispatch]
 
 jobs:
   default-job:
@@ -9,10 +9,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@main
-      - name: Print Context Variables
+      - name: Print Main Contexts Variables
         run: |
           echo "Event"
-          echo "- Object: ${{ toJSON(github.event) }}"
           echo "- Name: ${{ github.event_name }}"
 
           echo
@@ -30,7 +29,7 @@ jobs:
           echo "Runner"
           echo "- Name: ${{ runner.name }}"
           echo "- OS: ${{ runner.os }}"
-          echo "- ArchitectureOS: ${{ runner.arch }}"
+          echo "- Architecture: ${{ runner.arch }}"
 
           echo
           echo "Run"
