@@ -16,5 +16,5 @@ jobs:
           echo "Event: ${{ github.GITHUB_EVENT_NAME }}"
           echo "Runner Name: ${{ github.RUNNER_NAME }}"
           echo "Runner OS: ${{ runner.os }}"
-          echo "Run ID: $env:GITHUB_RUN_ID"
-          echo "Run Number: $env:GITHUB_RUN_NUMBER"
+          echo "Run ID: ${{ env:GITHUB_RUN_ID }}"
+          echo "Run Number: ${{ env:GITHUB_RUN_NUMBER }}"
