@@ -16,9 +16,9 @@ jobs:
           echo "Event: ${{ github.GITHUB_EVENT_NAME }}"
           
           echo "Runner"
-          echo "\tName: ${{ runner.name }}"
-          echo "\tOS: ${{ runner.os }}"
-          echo "\tArchitectureOS: ${{ runner.arch }}"
+          echo '\t' "Name: ${{ runner.name }}"
+          echo '\t' "OS: ${{ runner.os }}"
+          echo '\t' "ArchitectureOS: ${{ runner.arch }}"
           
           echo "Run ID: ${{ env.GITHUB_RUN_ID }}"
           echo "Run Number: ${{ env.GITHUB_RUN_NUMBER }}"
