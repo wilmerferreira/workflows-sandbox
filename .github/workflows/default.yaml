@@ -12,14 +12,20 @@ jobs:
       - name: Print Context Variables
         run: |
           echo "Repository: ${{ github.repository }}"
-          echo "Workflow: ${{ github.workflow }}"
           echo "Event: ${{ github.event_name }}"
+
+          echo
+          echo "Workflow"
+          echo "- Name: ${{ github.workflow }}"
+          echo "- Path: ${{ github.workflow_ref }}"
           
+          echo
           echo "Runner"
           echo "- Name: ${{ runner.name }}"
           echo "- OS: ${{ runner.os }}"
           echo "- ArchitectureOS: ${{ runner.arch }}"
 
+          echo
           echo "Run"
-          echo "- ID: ${{ env.run_id }}"
-          echo "- Number: ${{ env.run_number }}"
+          echo "- ID: ${{ github.run_id }}"
+          echo "- Number: ${{ github.run_number }}"
