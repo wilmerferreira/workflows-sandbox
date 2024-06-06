@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
       - name: Print Context Variables
         run: |
-          echo "Hello from workflow!"
+          echo "Repository: ${{ github.repository }}
+          echo "Workflow: ${{ github.GITHUB_ACTION }}"
