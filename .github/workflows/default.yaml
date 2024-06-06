@@ -12,4 +12,4 @@ jobs:
       - name: Print Context Variables
         run: |
           echo "Repository: ${{ github.repository }}"
-          echo "Workflow: ${{ GITHUB_ACTION }}"
+          echo "Workflow: ${{ github.GITHUB_WORKFLOW }}"
